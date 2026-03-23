@@ -1,6 +1,6 @@
-# Bitcoin Blockchain (LAN)
+# Bitcoin Blockchain with LAN
 
-A minimal Bitcoin-style blockchain with proof-of-work mining, ASCII visualization, and LAN networking. Zero dependencies — Python 3.10+ stdlib only.
+A minimal Bitcoin blockchain with proof-of-work mining, ASCII visualization, and LAN networking. Zero dependencies — Python 3.10+ stdlib only!
 
 ## Offline Mode
 
@@ -29,7 +29,7 @@ python blockchain.py --name Alice    # custom miner name
   Chain integrity: ✓ VALID
 ```
 
-### Hardcoded demo
+### Offline hardcoded demo
 
 ```bash
 python blockchain.py --demo
@@ -73,6 +73,8 @@ python node.py --port 9000 --name Alice
 
 # Machine B
 python node.py --port 9000 --name Bob
+
+# Machine C...
 ```
 
 ### 3. Connect peers (bidirectional — only one side needs to run this)
@@ -162,26 +164,6 @@ python node.py --port 9000 --name Charlie
   (all 3 machines show the same chain)
 ```
 
-### Classroom demo
-
-Teacher runs a node, students interact via `curl` from their laptops — no install needed:
-
-```bash
-# Teacher starts the node
-python node.py --port 9000 --name Teacher
-
-# Student submits a transaction from any browser or terminal
-curl -X POST http://10.0.0.5:9000/transactions/new \
-  -H "Content-Type: application/json" \
-  -d '{"sender":"StudentA","recipient":"StudentB","amount":5}'
-
-# Another student mines
-curl -X POST http://10.0.0.5:9000/mine
-
-# Anyone can view the chain in a browser
-# Visit: http://10.0.0.5:9000/visualize
-```
-
 ### Multi-miner competition
 
 Run several nodes and race to mine blocks — whoever mines first gets the 6.25 BTC reward:
@@ -195,11 +177,6 @@ python node.py --port 9001 --name Miner2
 
 # Terminal 3
 python node.py --port 9002 --name Miner3
-```
-
-Get localhost ip:  
-```
-ipconfig getifaddr en0
 ```
 
 ```
@@ -218,7 +195,7 @@ ipconfig getifaddr en0
   Miner1: 6.2500 BTC
 ```
 
-## LAN Mode: 
+## LAN Mode Workflow: 
 
 ```
 tx submitted
