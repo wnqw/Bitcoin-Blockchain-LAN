@@ -1,4 +1,4 @@
-# Bitcoin Blockchain with LAN
+# Smilecoin😃 (LAN Bitcoin Blockchain)
 
 A minimal Bitcoin blockchain with proof-of-work mining, ASCII visualization, and LAN networking. Zero dependencies — Python 3.10+ stdlib only!
 
