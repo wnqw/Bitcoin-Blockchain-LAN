@@ -1,2 +1,4 @@
 # Per-actor / per-node data dirs (e.g. data_alice, data_bob)
 data_*/
+__pycache__/
+.*
