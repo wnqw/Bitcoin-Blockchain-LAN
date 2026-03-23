@@ -2,6 +2,10 @@
 
 A minimal Bitcoin-style blockchain with proof-of-work mining, ASCII visualization, and LAN networking. Zero dependencies — Python 3.10+ stdlib only!
 
+## Quick Start
+```bash
+git clone https://github.com/wnqw/Smilecoin.git
+```
 ## Offline Mode
 
 ### Interactive (add your own transactions)
