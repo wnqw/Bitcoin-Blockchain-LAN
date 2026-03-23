@@ -223,10 +223,9 @@ pending_transactions[]
     replay all txs from chain
 ```
 
-### Example Session:
+### Example Session (Bob's End):
 
 ```
-============================================================
 [Bob] > tx Bob Alice 1.0
   Transaction queued for block #2
 [Bob] > mine
